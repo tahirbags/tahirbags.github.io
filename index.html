@@ -205,7 +205,37 @@ function ready(error, us, maptemplate) {
     .attr("class", "g-source-reg");    
 
     //RESPONSIVENESS
-d3.select(window).on('resize', resize);
+  d3.select(window).on('resize', resize);
+
+  // Update Pagination
+  <div class="pagination">
+    <a href="COVID19_2020_daily_cases_Bystate.html">&laquo;</a>
+    <a class="active" href="COVID19_2020_daily_deaths_US.html">Overview</a>
+    <a href="COVID19_2020_daily_deaths_CA.html">1</a>
+    <a href="COVID19_2020_daily_deaths_CO.html">2</a>
+    <a href="COVID19_2020_daily_deaths_NY.html">3</a>
+    <a href="COVID19_2020_daily_cases_Bystate.html">4</a>
+    <a href="COVID19_2020_daily_deaths_CA.html">&raquo;</a>
+      
+  </div>
+  <style>
+      .pagination a { 
+          color: black;
+          float: left;
+          padding: 20px 32px;
+      }
+      
+      .pagination a.active {
+      background-color: rgb(0, 136, 255);
+      color: white;
+      }
+  
+      p {
+        font-size: 24px; /* Set the font size to make the text bigger */
+      }
+
+  </style>
+
 
 function resize() {
 
@@ -233,37 +263,6 @@ function resize() {
 
     // resize the map
     map.selectAll("path").attr('d', path);
-
-   // update pagination
-  <div class="pagination">
-      <a href="COVID19_2020_daily_cases_Bystate.html">&laquo;</a>
-      <a class="active" href="COVID19_2020_daily_deaths_US.html">Overview</a>
-      <a href="COVID19_2020_daily_deaths_CA.html">1</a>
-      <a href="COVID19_2020_daily_deaths_CO.html">2</a>
-      <a href="COVID19_2020_daily_deaths_NY.html">3</a>
-      <a href="COVID19_2020_daily_cases_Bystate.html">4</a>
-      <a href="COVID19_2020_daily_deaths_CA.html">&raquo;</a>
-      
-  </div>
-  <style>
-      .pagination a { 
-          color: black;
-          float: left;
-          padding: 20px 32px;
-      }
-      
-      .pagination a.active {
-      background-color: rgb(0, 136, 255);
-      color: white;
-      }
-  
-      p {
-        font-size: 24px; /* Set the font size to make the text bigger */
-      }
-
-</style>
-
-  
 }
 }
 </script>
