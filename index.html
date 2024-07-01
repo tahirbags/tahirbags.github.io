@@ -204,6 +204,9 @@ function ready(error, us, maptemplate) {
       .style("opacity", 0);
     });
 
+  // Append Legend for Chloropleth
+  d3.select(".g-intro").text("Low --> High");
+
   //Appends chart source
   d3.select(".g-source-bold")
     .text("SOURCE: ")
