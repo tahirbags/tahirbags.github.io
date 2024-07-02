@@ -56,7 +56,7 @@ div.tooltip {
   position: absolute;
   left: 75px;
   text-align: center;
-  height: 20px;
+  height: 30px;
   padding: 8px;
   font-size: 13px;
   font-family: 'Proxima-Nova', sans-serif;
@@ -190,7 +190,7 @@ function ready(error, us, maptemplate) {
       d3.select(this).transition().duration(300).style("opacity", 0.8);
       div.transition().duration(300)
       .style("opacity", 1)
-      div.html(stateByFIPS[d.id] + ":<br>" + "Total Deaths: " + dataByFIPS[d.id])
+      div.html(stateByFIPS[d.id] + "<br>" + "Total Deaths: " + dataByFIPS[d.id])
       .style("left", (d3.event.pageX) + "px")
       .style("top", (d3.event.pageY -30) + "px");
     })
