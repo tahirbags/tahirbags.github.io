@@ -1,0 +1,53 @@
+state,num,FIPS
+Alaska,2573,2
+Alabama,24811,1
+Arkansas,15323,5
+Arizona,27673,4
+California,158453,6
+Colorado,21257,8
+Connecticut,20100,9
+District of Columbia,2746,#N/A
+Delaware,5525,10
+Florida,107015,12
+Georgia,45178,13
+Hawaii,6831,15
+Idaho,7095,16
+Illinois,64334,17
+Indiana,31940,18
+Iowa,16585,19
+Kansas,14173,20
+Kentucky,25640,21
+Louisiana,23600,22
+Massachusetts,34663,25
+Maryland,28925,24
+Maine,8068,23
+Michigan,51321,26
+Minnesota,26685,27
+Missouri,30780,29
+Mississippi,15317,28
+Montana,5413,30
+North Carolina,50087,37
+North Dakota,3436,38
+Nebraska,9226,31
+New Hampshire,7711,33
+New Jersey,48723,34
+New Mexico,8359,35
+Nevada,11427,32
+New York,107240,36
+Ohio,60898,39
+Oklahoma,18476,40
+Oregon,20204,41
+Pennsylvania,75865,42
+Puerto Rico,15041,#N/A
+Rhode Island,6023,44
+South Carolina,24492,45
+South Dakota,4346,46
+Tennessee,33521,47
+Texas,99548,48
+Utah,9509,49
+Virginia,37086,51
+Vermont,3436,50
+Washington,34134,53
+Wisconsin,30115,55
+West Virginia,11238,54
+Wyoming,2458,56
