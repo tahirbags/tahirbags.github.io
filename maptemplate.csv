@@ -1,4 +1,4 @@
-Row Labels,mortality,Sum of deaths,Sum of cases
+state,FIPS,Sum of deaths,Sum of cases
 Alabama,1.63%,526388,32236000
 Alaska,0.46%,13147,2854127
 Arizona,2.22%,1048821,47147078
