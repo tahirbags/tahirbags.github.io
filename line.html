@@ -141,7 +141,30 @@ div.tooltip {
         //Appends chart intro text
         d3.select(".g-intro").text("This visualization is a Heat Map of the United States, where each state is shaded according to the total number of COVID-19 cases recorded in 2020. The color gradient ranges from light to dark, with lighter shades representing lower case counts and darker shades indicating higher case counts. This map provides a clear geographic perspective on the spread and intensity of the pandemic across different states.The states with the darkest shades, such as New York, California, and Texas, show the highest number of cases, reflecting the early and intense outbreaks in densely populated areas. Conversely, states like Vermont and Wyoming, with lighter shades, indicate relatively fewer cases. This visualization helps identify the regions most impacted by the pandemic and underscores the variability in case numbers across the country, highlighting the importance of tailored public health responses.");
 
-
+        <form> 
+            <select id ="dropdown"> 
+                <option value="Illinois">Select a State (default: Illinois)</option>
+                <option value="California">California</option>
+                <option value="New York">New York</option>
+                <option value="Texas">Texas</option>
+                <option value="Florida">Florida</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="New Jersey">New Jersey</option>
+            </select>
+        </form>
+        
+        <style>
+            /* Apply  styles to the dropdown */
+            #dropdown {
+              margin-left: 50px;
+              height: 30px;
+              font-size: 15px; 
+              color: black;
+            }
+          </style>
         // Create an SVG element
         const svg = d3.select("#chart")
             .append("svg")
@@ -265,30 +288,6 @@ div.tooltip {
     }
      
     </script>
-<form> 
-    <select id ="dropdown"> 
-        <option value="Illinois">Select a State (default: Illinois)</option>
-        <option value="California">California</option>
-        <option value="New York">New York</option>
-        <option value="Texas">Texas</option>
-        <option value="Florida">Florida</option>
-        <option value="Illinois">Illinois</option>
-        <option value="Michigan">Michigan</option>
-        <option value="Connecticut">Connecticut</option>
-        <option value="Massachusetts">Massachusetts</option>
-        <option value="New Jersey">New Jersey</option>
-    </select>
-</form>
-
-<style>
-    /* Apply  styles to the dropdown */
-    #dropdown {
-      margin-left: 50px;
-      height: 30px;
-      font-size: 15px; 
-      color: black;
-    }
-  </style>
 
 </body>
 
