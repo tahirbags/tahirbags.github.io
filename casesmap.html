@@ -276,7 +276,7 @@ function ready(error, us, maptemplate) {
   maptemplate.forEach(function(d) { stateByFIPS[d.FIPS] = d.state; });
   
   //Appends chart headline
-  d3.select(".g-hed").text("Mapping the COVID19 Outbreak in the US);
+  d3.select(".g-hed").text("Mapping the COVID19 Outbreak in the US");
 
   //Appends chart intro text
   d3.select(".g-intro").text("This heat map of the United States shows COVID-19 case distribution in 2020. Darker shades represent higher case counts, with states like New York, California, and Texas being most affected. Lighter shades indicate fewer cases in states like Vermont and Wyoming");
