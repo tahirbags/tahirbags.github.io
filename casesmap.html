@@ -172,7 +172,7 @@ var annotations = [
     "cx": 250,
     "cy": 320,
     "r": 20,
-    "text": "1. California",
+    "text": "Cases peaked in December of 2020 (California coronavirus cases and deaths | <a href="https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/state/california/">USAFacts</a>)",
     "textWidth": 200,
     "textOffset": [
       -50,
@@ -276,10 +276,10 @@ function ready(error, us, maptemplate) {
   maptemplate.forEach(function(d) { stateByFIPS[d.FIPS] = d.state; });
   
   //Appends chart headline
-  d3.select(".g-hed").text("Heat Map of COVID-19 Cases in US States in 2020");
+  d3.select(".g-hed").text("Mapping the COVID19 Outbreak in the US);
 
   //Appends chart intro text
-  d3.select(".g-intro").text("This visualization is a Heat Map of the United States, where each state is shaded according to the total number of COVID-19 cases recorded in 2020. The color gradient ranges from light to dark, with lighter shades representing lower case counts and darker shades indicating higher case counts. This map provides a clear geographic perspective on the spread and intensity of the pandemic across different states.The states with the darkest shades, such as New York, California, and Texas, show the highest number of cases, reflecting the early and intense outbreaks in densely populated areas. Conversely, states like Vermont and Wyoming, with lighter shades, indicate relatively fewer cases. This visualization helps identify the regions most impacted by the pandemic and underscores the variability in case numbers across the country, highlighting the importance of tailored public health responses.");
+  d3.select(".g-intro").text("This heat map of the United States shows COVID-19 case distribution in 2020. Darker shades represent higher case counts, with states like New York, California, and Texas being most affected. Lighter shades indicate fewer cases in states like Vermont and Wyoming");
 
   //Append states
   map.append("g")
