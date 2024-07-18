@@ -274,10 +274,10 @@ function ready(error, us, maptemplate) {
   maptemplate.forEach(function(d) { stateByFIPS[d.FIPS] = d.state; });
 
   //Appends chart headline
-  d3.select(".g-hed").text("Heat Map of COVID-19 Mortality in US States in 2020");
+  d3.select(".g-hed").text("Heat Map of COVID-19 Mortality Rates across US States in 2020");
 
   //Appends chart intro text
-  d3.select(".g-intro").text("This Heat Map displays the mortality rate of COVID-19 across US states in 2020. Similar to the previous map, it uses a color gradient to represent data, with lighter shades indicating lower mortality rates and darker shades showing higher mortality rates. This map focuses on the severity of the pandemic's impact in terms of deaths, rather than the number of cases. States like New Jersey, New York, and Louisiana are depicted with darker shades, indicating higher mortality rates, often correlating with early and severe outbreaks, overwhelmed healthcare systems, and higher population densities. In contrast, states like Hawaii and Alaska, with lighter shades, show lower mortality rates, possibly due to effective containment measures, less dense populations, or other factors. This visualization is crucial for understanding the fatality impact of COVID-19 and can inform future public health strategies and resource allocation.");
+  d3.select(".g-intro").text("This Heat Map illustrates COVID-19 mortality rates across US states in 2020. Darker shades represent higher mortality rates, often associated with severe outbreaks and overwhelmed healthcare systems. Lighter shades indicate lower rates, possibly due to effective containment measures or less dense populations.");
 
   //Append states
   map.append("g")
