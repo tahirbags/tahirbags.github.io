@@ -135,7 +135,7 @@ var annotations = [
   {
     "cx": 1000,
     "cy": 190,
-    "r": 65,
+    "r": 70,
     "text": "The proportion of deaths estimated by the excess mortality method for COVID-19 was highest in the Northeast (92%)",
     "textWidth": 200,
     "textOffset": [
@@ -282,9 +282,8 @@ function ready(error, us, maptemplate) {
   var gAnnotations = map.append("g")
       .attr("class", "annotations")
       .call(ringNote, annotations)
-      .style("fill", "yellow")
-      .style("opacity", 0.65)
-      .style("stroke", "black")
+      .style("fill", "none")
+      .style("stroke", "yellow")
 
   gAnnotations.selectAll(".annotation circle")
     .classed("hidden", function(d) { return d.hideCircle; })
