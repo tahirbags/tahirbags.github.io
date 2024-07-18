@@ -282,8 +282,9 @@ function ready(error, us, maptemplate) {
   var gAnnotations = map.append("g")
       .attr("class", "annotations")
       .call(ringNote, annotations)
-      .style("fill", "none")
-      .style("stroke", "yellow")
+      .style("fill", "yellow")
+      .style("opacity", 0.6)
+      .style("stroke", "black")
 
   gAnnotations.selectAll(".annotation circle")
     .classed("hidden", function(d) { return d.hideCircle; })
