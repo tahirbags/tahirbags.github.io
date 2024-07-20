@@ -66,6 +66,10 @@ body {
 .g-intro {
   font-size: 16px;
   margin: 0px 0px 10px 0px;
+
+  .g-intro1 {
+  font-size: 16px;
+  margin: 0px 0px 50px 0px;
 }
 
 .states {
@@ -290,7 +294,9 @@ function ready(error, us, maptemplate) {
   d3.select(".g-hed").text("Mapping the COVID19 Outbreak in the US by Cases and Deaths");
 
   //Appends chart intro text
-  d3.select(".g-intro").text("The message of the narrative visualization is to provide an understanding of the distribution and impact of COVID-19 cases, deaths, and mortalities across the United States. Specifically, it aims to highlight the differences between case counts and mortality rates in various states, showing how high case counts do not necessarily correlate with high mortality rates.                            This heat map of the United States shows COVID-19 case distribution in 2020. Darker shades represent higher case counts, with states like New York, California, and Texas being most affected. Lighter shades indicate fewer cases in states like Vermont and Wyoming. The annotations outline possible reasons that may have caused the increase in case count.");
+  d3.select(".g-intro").text("The message of the narrative visualization is to provide an understanding of the distribution and impact of COVID-19 cases, deaths, and mortalities across the United States. Specifically, it aims to highlight the differences between case counts and mortality rates in various states, showing how high case counts do not necessarily correlate with high mortality rates.");
+  d3.select(".g-intro1").text("This heat map of the United States shows COVID-19 case distribution in 2020. Darker shades represent higher case counts, with states like New York, California, and Texas being most affected. Lighter shades indicate fewer cases in states like Vermont and Wyoming. The annotations outline possible reasons that may have caused the increase in case count.");
+                             
 
   //Append states
   map.append("g")
