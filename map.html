@@ -286,7 +286,7 @@ function ready(error, us, maptemplate) {
   d3.select(".g-hed").text("Heat Map of COVID-19 Mortality Rates across US States in 2020");
 
   //Appends chart intro text
-  d3.select(".g-intro").text("This Heat Map illustrates COVID-19 mortality rates across US states in 2020. Darker shades represent higher mortality rates, often associated with severe outbreaks and overwhelmed healthcare systems. Lighter shades indicate lower rates, possibly due to effective containment measures or less dense populations. The annotations highlight possible reasons contributing to the high mortality rates / or low(er) mortality rates when the case counts were high.");
+  d3.select(".g-intro").text("This Heat Map illustrates COVID-19 mortality rates across US states in 2020. Darker shades represent higher mortality rates, often associated with severe outbreaks and overwhelmed healthcare systems. Lighter shades indicate lower rates, possibly due to effective containment measures or less dense populations. The annotations highlight possible reasons contributing to the high mortality rates or low(er) than expected mortality rates.");
 
   //Append states
   map.append("g")
