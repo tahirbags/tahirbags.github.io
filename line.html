@@ -150,10 +150,10 @@ body {
         const margin = { top: 40, right: 40, bottom: 60, left: 80 };
 
         //Appends chart headline
-        d3.select(".g-hed").text("Heat Map of COVID-19 Cases in US States in 2020");
+        d3.select(".g-hed").text("Compare Cases vs Deaths over time for Top 5 States (in each category) in the US");
 
         //Appends chart intro text
-        d3.select(".g-intro").text("This visualization is a Heat Map of the United States, where each state is shaded according to the total number of COVID-19 cases recorded in 2020. The color gradient ranges from light to dark, with lighter shades representing lower case counts and darker shades indicating higher case counts. This map provides a clear geographic perspective on the spread and intensity of the pandemic across different states.The states with the darkest shades, such as New York, California, and Texas, show the highest number of cases, reflecting the early and intense outbreaks in densely populated areas. Conversely, states like Vermont and Wyoming, with lighter shades, indicate relatively fewer cases. This visualization helps identify the regions most impacted by the pandemic and underscores the variability in case numbers across the country, highlighting the importance of tailored public health responses.");
+        d3.select(".g-intro").text("This Interactive Plotter allows you to compare cases and deaths interactively for the Top 5 states in each category. The interactive elements enable users to explore the data dynamically, reinforcing the message by providing a deeper, more personalized look at the statistics.");
 
         // Create an SVG element
         const svg = d3.select("#chart")
@@ -172,6 +172,24 @@ body {
             //get element in dropdown
            //     var keyword = "US"
             fetch_data = get_data(data, ele.value);
+
+
+        //Moves selection to front
+        d3.selection.prototype.moveToFront = function() {
+          return this.each(function(){
+            this.parentNode.appendChild(this);
+          });
+        }; 
+        
+        //Moves selection to back
+        d3.selection.prototype.moveToBack = function() { 
+          return this.each(function() { 
+          var firstChild = this.parentNode.firstChild; 
+            if (firstChild) { 
+              this.parentNode.insertBefore(this, firstChild); 
+            } 
+          }); 
+        }; 
             
        //append x and y axis temporary
          svg.append("g")
@@ -239,23 +257,27 @@ body {
                 .style("pointer-events", "none")
                 .style("opacity", 0) ;
 
-            // Append a transparent overlay on top of the line to capture mouse events
-            svg.append("rect")
-                .style("fill", "none")
-                .style("pointer-events", "all")
-                .on("mousemove", function (event) {
-                    const dataPoint = fetch_data[index - 1];
-
-                    // Update data point
-                    tooltip
-                        .html(`Date: ${dataPoint.date.toDateString()}<br>Daily Deaths: ${dataPoint.daily_deaths}`)
-                        .style("left", `${mouseX}px`)
-                        .style("top", `${yScale(dataPoint.daily_deaths) - 30}px`)
-                        .style("opacity", 1);
+                  //Hovers
+                .on("mouseover", function(d) {
+                  var sel = d3.select(this);
+                    sel.moveToFront();
+                  d3.select(this).transition().duration(300).style("opacity", 0.8);
+                  div.transition().duration(300)
+                  .style("opacity", 1)
+                  //let formattedDeaths = deathByFIPS[d.id].toLocaleString();
+            
+                  .html(`Date: ${dataPoint.date.toDateString()}<br>Daily Deaths: ${dataPoint.daily_deaths}`)
+                  .style("left", (d3.event.pageX) + "px")
+                  .style("top", (d3.event.pageY -30) + "px");
                 })
-                .on("mouseout", function () {
-                    // Hide data if mouse off
-                    tooltip.style("opacity", 0);
+                .on("mouseout", function() {
+                  var sel = d3.select(this);
+                    sel.moveToBack();
+                  d3.select(this)
+                  .transition().duration(300)
+                  .style("opacity", 1);
+                  div.transition().duration(300)
+                  .style("opacity", 0);
                 });
                
                 // Chart labels
