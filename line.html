@@ -218,7 +218,13 @@ body {
                     .duration(2000)
                    .call(d3.axisLeft(yScale));
 
-                   var max_cases=d3.max(fetch_data, d=> +d.daily_cases);
+                // Define a tooltip element, define mouseover
+                const tooltip = d3.select(".tooltip")
+                .style("position", "absolute")
+                .style("pointer-events", "none")
+                .style("opacity", 0) ;
+              
+                var max_cases=d3.max(fetch_data, d=> +d.daily_cases);
                 // Set the gradient 
                 //(code taken from: https://www.d3-graph-gallery.com/graph/line_color_gradient_svg.html)
                 d3.select("svg").append("linearGradient")
@@ -236,28 +242,7 @@ body {
                 .enter().append("stop")
                     .attr("offset", function(d) { return d.offset; })
                     .attr("stop-color", function(d) { return d.color; })
-           
-            // Add the line
-               svg.selectAll(".chart_line")
-                    .data([fetch_data], function(d) { return d.date })
-                    .join("path")
-                    .attr("class", "chart_line")
-                        .transition()
-                        .duration(2000)
-                        .attr('stroke', 'url(#line-gradient') 
-                        .attr('fill', 'none')
-                        .attr('stroke-width', '2')
-                        .attr('d', d3.line()
-                            .x(function(d) { return xScale(d.date); })
-                            .y(function(d) { return yScale(d.daily_cases); }));
-
-                // Define a tooltip element, define mouseover
-            const tooltip = d3.select(".tooltip")
-                .style("position", "absolute")
-                .style("pointer-events", "none")
-                .style("opacity", 0) ;
-
-                  //Hovers
+                //Hovers
                 .on("mouseover", function(d) {
                   var sel = d3.select(this);
                     sel.moveToFront();
@@ -279,6 +264,20 @@ body {
                   div.transition().duration(300)
                   .style("opacity", 0);
                 });
+           
+            // Add the line
+               svg.selectAll(".chart_line")
+                    .data([fetch_data], function(d) { return d.date })
+                    .join("path")
+                    .attr("class", "chart_line")
+                        .transition()
+                        .duration(2000)
+                        .attr('stroke', 'url(#line-gradient') 
+                        .attr('fill', 'none')
+                        .attr('stroke-width', '2')
+                        .attr('d', d3.line()
+                            .x(function(d) { return xScale(d.date); })
+                            .y(function(d) { return yScale(d.daily_cases); }));
                
                 // Chart labels
                 svg.append("text")
