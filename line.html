@@ -64,19 +64,6 @@ body {
   stroke-linejoin: round;
 }
 
-div.tooltip {
-  position: absolute;
-  left: 75px;
-  text-align: center;
-  height: 35px;
-  padding: 8px;
-  font-size: 13px;
-  font-family: 'Proxima-Nova', sans-serif;
-  background: #FFFFFF;
-  border: 1px solid #989898;
-  pointer-events: none;
-}
-
 .block {
   width:10%;
   height: 15px;
@@ -91,7 +78,7 @@ div.tooltip {
     <a href="line.html">&laquo;</a>
     <a class="active" href="casesmap.html">US Cases</a>
     <a href="map.html">US Mortalities</a>
-    <a href="line.html">US States with Best Responses</a>
+    <a href="line.html">Interactive Plotter - Cases vs Time</a>
     <a href="casesmap.html">&raquo;</a>
   <div class="g-source"><span class="g-source-bold"></span><span class="g-source-reg"></span></div>
 
@@ -226,7 +213,7 @@ div.tooltip {
                 .selectAll("stop")
                     .data([
                     {offset: "0%", color: "blue"},
-                    {offset: "100%", color: "orange"}
+                    {offset: "100%", color: "red"}
                     ])
                 .enter().append("stop")
                     .attr("offset", function(d) { return d.offset; })
