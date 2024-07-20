@@ -308,7 +308,15 @@ body {
     }
      
     </script>
-
+  
+    //Appends chart source
+    d3.select(".g-source-bold")
+      .text("Source Data: ")
+      .attr("class", "g-source-bold");
+  
+    d3.select(".g-source-reg")
+      .text("https://github.com/tahirbags/tahirbags.github.io/blob/main/us-states-2020.csv")
+      .attr("class", "g-source-reg");
 </body>
 
 </html>
