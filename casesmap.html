@@ -185,7 +185,7 @@ var annotations = [
     "cx": 780,
     "cy": 270,
     "r": 15,
-    "text": "Illinois closes all schools, colleges, ordering a stop to eviction enforcements, ordering all bars and restaurants closed to sit-in diners",
+    "text": "Illinois increase is likely due to Chicago being a large transportation hub (O'Hare) and high density urban area (3rd largest city in the US)",
     "textWidth": 200,
     "textOffset": [
       130,
@@ -281,7 +281,7 @@ function ready(error, us, maptemplate) {
   d3.select(".g-hed").text("Mapping the COVID19 Outbreak in the US");
 
   //Appends chart intro text
-  d3.select(".g-intro").text("This heat map of the United States shows COVID-19 case distribution in 2020. Darker shades represent higher case counts, with states like New York, California, and Texas being most affected. Lighter shades indicate fewer cases in states like Vermont and Wyoming");
+  d3.select(".g-intro").text("This heat map of the United States shows COVID-19 case distribution in 2020. Darker shades represent higher case counts, with states like New York, California, and Texas being most affected. Lighter shades indicate fewer cases in states like Vermont and Wyoming. The annotations outline possible reasons that may have caused the increase in case count.");
 
   //Append states
   map.append("g")
