@@ -159,10 +159,10 @@ body {
         const margin = { top: 40, right: 40, bottom: 60, left: 80 };
 
         //Appends chart headline
-        d3.select(".g-hed").text("Compare Cases vs Deaths over time for Top 5 States (in each category) in the US");
+        d3.select(".g-hed").text("Compare Cases over time for Top 5 States in the US");
 
         //Appends chart intro text
-        d3.select(".g-intro").text("This Interactive Plotter allows you to compare cases and deaths interactively for the Top 5 states in each category. The interactive elements enable users to explore the data dynamically, reinforcing the message by providing a deeper, more personalized look at the statistics.");
+        d3.select(".g-intro").text("This Interactive Plotter allows you to compare cases interactively for the Top 5 states (by cases and deaths respectively). The interactive drop down enables users to select the state and review the data over time.");
 
         // Create an SVG element
         const svg = d3.select("#chart")
