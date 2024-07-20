@@ -8,6 +8,7 @@
 1. **Map Chart**: https://gist.github.com/jadiehm/8f5adc05465a94e77e30/
 2. **USA Facts**: https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/
 3. **D3 Ring Annotation**: https://github.com/armollica/d3-ring-note
+4.  **Line Chart**: https://www.d3-graph-gallery.com/graph/line_color_gradient_svg.html
 
 ## Project Details
 
