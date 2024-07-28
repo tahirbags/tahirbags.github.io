@@ -114,21 +114,12 @@ div.tooltip {
   <p class="g-intro"></p>
   <div class="pagination">
     <a href="line.html">&laquo;</a>
+    <a class="active" href="index.html">COVID19 Overview</a>
     <a class="active" href="casesmap.html">US Cases</a>
     <a href="map.html">US Mortalities</a>
     <a href="line.html">Interactive Plotter - Cases vs Time</a>
     <a href="casesmap.html">&raquo;</a>
 </div>  
-  <div class="g-chart"></div>
-    <div class="legend">
-    <div class="block" id="q0-9"></div>
-    <div class="block" id="q1-9"></div>
-    <div class="block" id="q2-9"></div>
-    <div class="block" id="q3-9"></div>
-    <div class="block" id="q4-9"></div>
-    <div class="block" id="q5-9"></div>
-    <div class="block" id="q6-9"></div>
-  </div>
   <div class="g-source"><span class="g-source-bold"></span><span class="g-source-reg"></span></div>
 </body>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
@@ -147,7 +138,7 @@ div.tooltip {
 d3.select(".g-hed").text("Mapping the COVID19 Outbreak in the US in 2020");
 
 //Appends chart intro text
-d3.select(".g-intro").text("The message of the narrative visualization is to provide an understanding of the distribution and impact of COVID-19 cases, deaths, and mortalities across the United States. Specifically, it aims to highlight the differences between case counts and mortality rates in various states, showing how high case counts do not necessarily correlate with high mortality rates. This heat map of the United States shows COVID-19 case distribution in 2020. Darker shades represent higher case counts, with states like New York, California, and Texas being most affected. Lighter shades indicate fewer cases in states like Vermont and Wyoming.");                             
+d3.select(".g-intro").text("The message of the narrative visualization is to provide an understanding of the distribution and impact of COVID-19 cases, deaths, and mortalities across the United States. Specifically, it aims to highlight the differences between case counts and mortality rates in various states, showing how high case counts do not necessarily correlate with high mortality rates.");                             
 
 
 </script>
