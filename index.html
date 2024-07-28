@@ -54,6 +54,10 @@ body {
   font-weight: bold; 
 }
 
+.g-image-container {
+  margin: 50px 50px 100px 100px; 
+}
+  
 .g-source-reg {
   text-align: left;
   font-size:10px; 
@@ -140,6 +144,10 @@ d3.select(".g-hed").text("Mapping the COVID19 Outbreak in the US in 2020");
 //Appends chart intro text
 d3.select(".g-intro").text("The message of the narrative visualization is to provide an understanding of the distribution and impact of COVID-19 cases, deaths, and mortalities across the United States. Specifically, it aims to highlight the differences between case counts and mortality rates in various states, showing how high case counts do not necessarily correlate with high mortality rates.");                             
 
-<img src="covid19.jpg" alt="COVID19 USA">
+/ Appends an image to the page
+d3.select(".g-image-container")  // Ensure there is a container for the image in your HTML
+  .append("img")
+  .attr("src", "covid19.jpg")  // Replace with the path to your image
+  .attr("alt", "Covid19 in USA");  // Optional: add an alt text for accessibility
 
 </script>
